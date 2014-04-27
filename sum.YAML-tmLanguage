@@ -1,0 +1,19 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: SUM Specification Language
+scopeName: source.sum
+fileTypes: [sum]
+uuid: 29e43893-37ff-4c25-83e3-be81eac4d6fc
+
+patterns:
+- match: \s(schema|end|is|op schema|axiom is|end;)\s
+  name: keyword.sum
+- match: \s//(.*)$
+  name: comment.sum
+- match: \s(pred|dec)\s
+  name: string.sum
+- match: (\(|\))
+  name: entity.name.tag.sum
+- match: (\spre\s|(?<![A-Za-z0-9_-])not\s|\schanges_only(\s|{)|{|}|\sor\s|\sand\s)
+  name: constant.numeric.sum
+...
