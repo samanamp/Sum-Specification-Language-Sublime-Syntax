@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>sum</string>
+	</array>
+	<key>name</key>
+	<string>SUM Specification Language</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>\s(schema|end|is|op schema|axiom is|end;)\s</string>
+			<key>name</key>
+			<string>keyword.sum</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\s//(.*)$</string>
+			<key>name</key>
+			<string>comment.sum</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\s(pred|dec)\s</string>
+			<key>name</key>
+			<string>string.regexp.sum</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\(|\))</string>
+			<key>name</key>
+			<string>entity.name.tag.sum</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\spre\s|(?&lt;![A-Za-z0-9_-])not\s|\schanges_only(\s|{)|{|}|\sor\s|\sand\s)</string>
+			<key>name</key>
+			<string>constant.numeric.sum</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.sum</string>
+	<key>uuid</key>
+	<string>29e43893-37ff-4c25-83e3-be81eac4d6fc</string>
+</dict>
+</plist>
